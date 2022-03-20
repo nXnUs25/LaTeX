@@ -1,0 +1,24 @@
+\contentsline {chapter}{Wst\IeC {\k e}p}{2}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Cel pracy}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Charakterystyka tematu pracy}{8}{chapter.2}
+\contentsline {chapter}{\numberline {3}Charakterystyka narz\IeC {\k e}dzia wykorzystywanego do wykonania pracy}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Katalog g\IeC {\l }\IeC {\'o}wny Moodle'a}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Katalog danych Moodle'a}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Baza danych Moodle'a}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Struktura katalog\IeC {\'o}w \textit {Moodle'a}}{14}{section.3.4}
+\contentsline {chapter}{\numberline {4}Charakterystyka wykorzystanych technologii}{17}{chapter.4}
+\contentsline {chapter}{\numberline {5}Uzasadnienie wyboru narz\IeC {\k e}dzi}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Popularno\IeC {\'s}\IeC {\'c}}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Koszt wykonania witryny}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Spo\IeC {\l }eczno\IeC {\'s}\IeC {\'c}}{22}{section.5.3}
+\contentsline {section}{\numberline {5.4}Filozofia edukacji}{22}{section.5.4}
+\contentsline {chapter}{\numberline {6}Projekt systemu}{28}{chapter.6}
+\contentsline {section}{\numberline {6.1}Charakterystyka witryny}{28}{section.6.1}
+\contentsline {section}{\numberline {6.2}Opis dzia\IeC {\l }ania witryny}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}Konfiguracja witryny}{33}{section.6.3}
+\contentsline {section}{\numberline {6.4}Plan tworzenia witryny nauczania}{44}{section.6.4}
+\contentsline {section}{\numberline {6.5}Schematy blokowe}{47}{section.6.5}
+\contentsline {chapter}{\numberline {7}Uwagi ko\IeC {\'n}cowe i wnioski}{48}{chapter.7}
+\contentsline {chapter}{Bibliografia}{54}{chapter*.3}
+\contentsline {chapter}{Spis Rysunk\IeC {\'o}w}{55}{chapter*.4}
+\contentsline {chapter}{Spis Tabel}{56}{chapter*.5}

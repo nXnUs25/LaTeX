@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt,oneside]{mwbk}
+
+%do polskiego wydania
+\usepackage[cp1250]{inputenc}
+\usepackage{polski}
+
+%do wstawiany obrazków
+\usepackage{graphicx}
+
+%nag³ówki
+\pagestyle{uheadings}
+
+%ustawienia storny
+\oddsidemargin = 10pt
+\textwidth = 470pt
+
+%1,5 linii odstêpu
+\linespread{1,3}
+
+%numerowanie definicji
+	\newtheorem {definicja}{Definicja}[chapter]%[section]
+%numerowanie przyk³adów
+	\newtheorem {przyklad}{Przyk³ad}[chapter]%[section]
+
+\begin{document}
+%spis treœci
+%			\tableofcontents
+%------------------------------------------------------------
+
+%teza, cel i zakres pracy
+			\include{rozdzial1}
+%------------------------------------------------------------
+
+%zbiory klasyczne
+%			\include{rozdzial2}
+
+%podsumowania
+		\include{rozdzial3}
+		
+%rysunki
+		\include{rozdzial4}
+
+\include{literatura}
+
+%------------------------------------------------------------
+%spis rysunków
+		\listoffigures
+%------------------------------------------------------------
+%spis tabel
+			\listoftables
+%------------------------------------------------------------
+\end{document}

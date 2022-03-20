@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {0.1}Wst\k ep}{3}{section.0.1}
+\contentsline {section}{\numberline {0.2}Cel pracy}{4}{section.0.2}
+\contentsline {section}{\numberline {0.3}Struktura pracy}{4}{section.0.3}
+\contentsline {chapter}{\numberline {1}Pocz\k atek...}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Steganografia}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Kryptografia}{6}{section.1.2}
+\contentsline {section}{\numberline {1.3}Szyfry z kluczem symertycznym}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Szyfry z kluczem asymertycznym}{9}{section.1.4}
+\contentsline {section}{\numberline {1.5}Podpis cyfrowy}{10}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Niezaprzeczalne podpisy cyfrowe}{12}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Niepodrabialne podpisy cyfrowe}{13}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Podpisy \'slepe}{14}{subsection.1.5.3}
+\contentsline {subsection}{\numberline {1.5.4}Inne warianty podpisu cyfrowego}{15}{subsection.1.5.4}
+\contentsline {chapter}{\numberline {2}Infrastruktura klucza publicznego}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}PKI w teorii...}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}...i w praktyce}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Z\IeC {\l }o\.zono\'s\'c}{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Zaufanie}{19}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Cykl \.zycia klucza}{20}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}J\k ezyk XML}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}XML Signature}{24}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Struktura dokumentu}{24}{subsection.3.1.1}
+\contentsline {subsubsection}{Element \textit {SignedInfo}}{25}{section*.2}
+\contentsline {subsubsection}{Element \textit {SignatureValue}}{25}{section*.3}
+\contentsline {subsubsection}{Element \textit {KeyInfo}}{25}{section*.4}
+\contentsline {subsubsection}{Element \textit {Object}}{25}{section*.5}
+\contentsline {subsection}{\numberline {3.1.2}Elementy dodatkowe}{25}{subsection.3.1.2}
+\contentsline {subsubsection}{Element \textit {Manifest}}{25}{section*.6}
+\contentsline {subsubsection}{Element \textit {SignaturePropeties}}{25}{section*.7}
+\contentsline {chapter}{\numberline {4}Zako\'nczenie}{26}{chapter.4}

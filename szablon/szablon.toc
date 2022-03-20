@@ -1,0 +1,9 @@
+\contentsline {chapter}{Rozdzia\PlPrIeC {\l }\ 1\relax .\kern .5em Wst\k ep}{2}
+\contentsline {section}{\numberline {1.1\relax .\kern .5em }Teza, cel i\nobreakspace {}zakres pracy}{2}
+\contentsline {chapter}{Rozdzia\PlPrIeC {\l }\ 2\relax .\kern .5em Elementy teorii zbior\'ow}{3}
+\contentsline {section}{\numberline {2.1\relax .\kern .5em }Zbiory w uj\k eciu klasycznym}{3}
+\contentsline {chapter}{Rozdzia\PlPrIeC {\l }\ 3\relax .\kern .5em Nowe sposoby generowania podsumowa\'n lingwistycznych}{6}
+\contentsline {chapter}{Rozdzia\PlPrIeC {\l }\ 4\relax .\kern .5em Implementacja}{8}
+\contentsline {chapter}{Bibliografia}{10}
+\contentsline {chapter}{Spis rysunk\'ow}{12}
+\contentsline {chapter}{Spis tabel}{13}

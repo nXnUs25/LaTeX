@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+% pakiet odpowiedzialny za linki
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=green]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+\linespread{1.3}
+\geometry{verbose,a4paper,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\hypersetup{pdfauthor={Augustyn Chmiel},pdftitle={Projekt i wykonanie strony internetowej wspomagającej zdalne nauczanie},pdfpagemode=None, colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+\begin{document}
+
+\pagestyle{fancy}
+\lhead{\thepage}
+\cfoot{\ }
+\lfoot{\thepage}
+
+\tableofcontents
+\newpage
+
+\chapter*{Wstęp} \label{roz:rozdzial_1}
+\addcontentsline{toc}{chapter}{Wstęp}
+	\thispagestyle{empty}
+	\input{wstep//w.tex}
+	\newpage
+	\input{wstep//w1.tex}
+\chapter{Cel pracy} \label{roz:rozdzial_2}
+	\thispagestyle{empty}
+	\input{cel_pracy//c.tex}
+	\newpage
+\chapter{Charakterystyka tematu pracy} \label{roz:rozdzial_3}
+	\thispagestyle{empty}
+	\input{char_tematu//t.tex}
+	\newpage
+\chapter{Charakterystyka narzędzia wykorzystywanego do wykonania pracy} \label{roz:rozdzial_4}
+	\thispagestyle{empty}
+	\input{char_narzarzedzi//n.tex}
+	\newpage
+\chapter{Charakterystyka wykorzystanych technologii} \label{roz:rozdzial_5}
+	\thispagestyle{empty}
+	\input{char_technologi//te.tex}
+	\newpage
+\chapter{Uzasadnienie wyboru narzędzi} \label{roz:rozdzial_6}
+	\thispagestyle{empty}
+	\input{uzas_wyb_narze//u.tex}
+	\newpage
+\chapter{Projekt systemu} \label{roz:rozdzial_7}
+	\thispagestyle{empty}
+	\input{projekt_sys//p.tex}
+	\newpage
+\chapter{Uwagi końcowe i wnioski} \label{roz:rozdzial_8}
+	\thispagestyle{empty}
+	\input{uwagi//uw.tex}
+	\newpage
+
+% ********************* Bibliografia *********************
+\begin{thebibliography}{99}
+	\bibitem{dokumentacja_moodle} Dokumentacja~Moodle'a \\
+	\textit{\href{http://docs.moodle.org/pl/O\_Moodle}{http://docs.moodle.org/pl/O\_Moodle}} \\
+	\textit{\href{http://docs.moodle.org/pl/Instalacja\_Moodle}{http://docs.moodle.org/pl/Instalacja\_Moodle}}
+	\bibitem{wiki_e-l} E-Learning Wikipedia \\
+	\textit{\href{http://pl.wikipedia.org/wiki/E-learning\#Podej.C5.9Bcia\_pedagogiczne}{http://pl.wikipedia.org/wiki/E-learning\#Podej.C5.9Bcia\_pedagogiczne}}
+	\bibitem{pedagogika}  Kształcenie na odległosc na podstawie wykorzystania \\systemu CLMS MOODLE jako technologia pedagogiczna\\
+	\textit{\href{http://www.up.krakow.pl/ktime/ref2007/Smyrnova.pdf}{www.up.krakow.pl}}
+	\bibitem{nowakowski} Z.~Nowakowski. \textit{Nowe koncepcje kształcenia oparte na e-learning},\\CKPiDN w Mielcu, \textit{"Zeszyty nauczycielskie"}, 2005
+	\bibitem{moodle_test} \textit{Moodle 1.9 Testing and Assessment} Jason Myrick
+	\bibitem{moodle_multimedia} \textit{Moodle 1.9 Multimedia} João Pedro Soares Fernandes
+	\bibitem{moodle_teaching} \textit{Moodle 1.9 Teaching Techniques} William Rice, Susan Smith Nash
+	\bibitem{tworzenie_serwisow} \textit{Moodle 1.9 E-Learning Course Development} William H. Rice IV
+	\bibitem{use_moodle} \textit{Using Moodle, 2nd Edition} Jason Cole, Helen Foster \textbf{\textit{O'REILLY}}
+\end{thebibliography}
+\addcontentsline{toc}{chapter}{Bibliografia}
+% ********************* Tworzy spis rysunków *********************
+	\listoffigures
+	\addcontentsline{toc}{chapter}{Spis Rysunków}
+% ******************** Tworzy spis tabel *************************
+	\listoftables
+	\addcontentsline{toc}{chapter}{Spis Tabel}
+\end{document}

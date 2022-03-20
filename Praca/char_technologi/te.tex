@@ -1,0 +1,52 @@
+\hspace{1cm}Podstawą tworzenia rozwiązań nauczania na odległość jest zapewnienie wymiany informacji pomiędzy prowadzącymi dane zajęcia, a ich odbiorcami. Sprawność wymiany informacji istotnie wpływa na jakość uczenia. Stąd, aby sprawnie prowadzić kształcenie e-learning-owe, konieczne jest dobranie odpowiedniego narzędzia informatycznego, specjalizowanego do tych zastosowań. Wyróżnia się dwie grupy platform dostępnych dla rozwiązań e-learning-owych:
+	\begin{itemize}
+		\item Platformy open-source, czyli wolne oprogramowanie przystosowane do zdalnego procesu nauczania.
+		\item Platformy komercyjne, przeważnie stworzone przez znane firmy komputerowe w celu informatyzacji procesu kształcenia np. \textit{Microsoft Class Server}.
+	\end{itemize}
+Narzędziem na jaki się zdecydowałem należy do grupy open source. Platforma ta posiada ponad 100~000 zarejestrowanych użytkowników na całym świecie, obsługuje ponad 70 języków. Główna cechą Moodle'a jest modułowość, dzięki czemu interfejs jest łatwy w obsłudze i może się z nim uporać nawet ktoś z niewielką wiedzą informatyczną.\\
+Platforma Moodle'a jest obecnie najczęściej używaną platformą zdalnego nauczania. Platforma Moodle'a łączy w sobie dwa systemy CMS\footnote{system zarządzania treścią (ang. Content Management System)} i LMS\footnote{system zarządzania procesem nauczania (ang. Learning Management System)}. Dzięki temu połączeniu cech które posiadają obydwa systemy otrzymano oprogramowanie, które wspomaga realizację procesu nauczania na odległość, pozwala to na umieszczanie oraz zmianę treści w sposób dynamiczny i prosty. \\
+\hspace{1cm}Moodle został zaprojektowany przez Martin Dougiamas – doktor nauk pedagogicznych z Curtin University of Technology, Perth, Australia. Dużą zaletą platformy Moodle'a jest jej forma darmowego oprogramowania, gdzie dzięki tej formie Moodle jest platformą która bardzo szybko się rozwija i zwiększa swoją funkcjonalność. Zgodnie z zasadami ruchu open source, system ten jest tworzony przez rzeszę programistów. Każdy może sprawdzić, co zawiera kod systemu, znaleźć błędy i jej poprawić przyczyniając się samemu do rozwoju platformy. Oprogramowanie platformy napisane jest w języku PHP i umożliwia użycie darmowych baz danych (MySQL, PostgreSQL). Platformę można zainstalować w dowolnym środowisku operacyjnym (MS Windows, Unix, Linux).\\
+Wymagania dla platformy Moodle'a zostały zawarte w tabeli~\ref{tab:wymagania_sprzetowe} \\
+	\begin{table}[!h]
+		\centering
+		\caption{Wymagania platformy Moodle'a.}
+		\label{tab:wymagania_sprzetowe}
+		\begin{tabular}{|l|p{10cm}|} \hline
+		 & \textbf{Parametry techniczne} \\ \hline
+			\textbf{Pamięć RAM:} & minimum 256MB zalecane 1GB. Ogólna zasada mówi ze Moodle może obsługiwać jednocześnie 50 użytkowników na każdy 1GB RAM-u, jednak liczby te mogą uledz zmianie w zależności od sprzętu i oprogramowania. \\ \hline
+			\textbf{Przestrzeń dyskowa:} & minimum 160MB wolnego miejsca. Ze względu na materiały do nauczania należy uwzględnić większą ilość wolnego miejsca. \\ \hline
+			\textbf{Oprogramowanie:} & Serwer WWW. Głównie Apache'a, ale Moodle powinien działać także pod każdym innym serwerem obsługującym PHP. Interpretator PHP. Dla Moodle w wersji 1.6 lub późniejszej: PHP4 (wersja 4.3.0 lub późniejsza) lub PHP5 (wersja 5.1.0 lub późniejsza). Przyszła wersja Moodle 2.0 i późniejsze nie będą wspierały PHP4 i będą wymagały PHP5 (w wersji 5.2.0 lub późniejszej). Serwer bazodanowy. Dla Moodle 1.7 i późniejszych, MySQL (w wersji 4.1.12 lub późniejszej), PostgreSQL (w wersji 7.4 lub późniejszej) albo Microsoft SQL Server 2005 (w wersji 9 lub SQL Server Express 2005 \\ \hline
+		\end{tabular}
+	\end{table}
+Poza wymaganiami sprzętowymi i programowymi, należy także pomyśleć o objętości instalacji Moodle'a. W znaczeniu ilu użytkowników ma obsługiwać platformę. Najważniejsze w tym przypadku są dwie liczby: \\
+	\begin{itemize}
+		\item \textbf{Użytkownicy przeglądający} są to tacy użytkownicy, którzy będą mogli przeglądać witrynę.
+		\item \textbf{Równocześni użytkownicy bazy} jest to maksymalna liczba użytkowników którzy będą korzystać z bazy danych  
+	\end{itemize}
+Ogólna zasada dla pojedynczego serwera jest taka, że przybliżona maksymalna ilość użytkowników = RAM (GB) * 50, a przybliżona maksymalna ilość użytkowników przeglądających jest 5 razy większa od poprzedniej wartości. Przykładowo, uniwersytet z 500 komputerami w kampusie i 100 równoległymi użytkownikami potrzebuje 2GB RAM-u na serwerze, aby obsłużyć jednocześnie tylu użytkowników\cite{dokumentacja_moodle}. \\
+Platforma Moodle, dzięki budowie modułowej i cechom systemu zarządzania treścią, pozwala na szybkie umieszczanie w niej treści oraz modyfikowanie zawartości strony z danym kursem przez pracowników dydaktycznych, bez konieczności posiadania wiedzy informatycznej. \\
+W platformie Moodle wyróżnić można 5 grup użytkowników posiadających różne uprawnienia: \\
+	\begin{itemize}
+		\item gość~-~może odwiedzić stronę główną platformy, przeglądać opisy, ale nie ma możliwości przystąpienia i przeglądania kursów.
+		\item student~-~posiada możliwość przeglądania wybranych kursów, ale jego prawa w kursach są ograniczone.
+		\item nauczyciel~bez~praw~edycji~-~mogą uczyć w kursach i oceniać studentów, ale nie mogą wprowadzać zmian edycyjnych.
+		\item prowadzący~-~mogą robić wszystko w kursie, np. zmieniać treść czy też oceniać uczniów. Nie mogą natomiast sami tworzyć nowych kursów.
+		\item autorzy~kursów~-~mogą tworzyć nowe kursy i być w nich nauczycielami oraz przypisywać do kursów prowadzących.
+		\item administrator~-~mogą robić wszystko z kursami jak i również z całą platformą.
+	\end{itemize}
+Studenci sami tworzą swoje konta. Administrator oraz wyznaczeni przez niego autorzy kursów kontrolują tworzenie kursów i przyporządkowują do nich prowadzących. Dla ograniczenia dostępu do danego kursu, możliwe jest ustanowienie do niego hasła dostępowego. Prowadzący kurs mogą: zapisywać i wypisywać studentów uczestniczących w tym kursie oraz umieszczać treści dydaktyczne. \\
+Tworzony kurs może posiadać trzy formaty: \\
+	\begin{itemize}
+		\item towarzyski
+		\item tematyczny
+		\item tygodniowy
+	\end{itemize}
+Wprowadzany tekst jest umieszczany za pomocą edytora WYSIWIG\footnote{WYSIWIG~-~co znaczy dosłownie To Co Widzisz Jest Tym Co Otrzymasz (ang. What You See Is What You Get)} HTML\footnote{HTML~-~język znaczników hipertekstu (ang. HyperText Markup Language)}. Prowadzący kurs ma do wykorzystania duży zestaw narzędzi wspomagających, takich jak:\\
+	\begin{itemize}
+		\item ankiety
+		\item quizy
+		\item zadania 
+		\item fora 
+		\item dzienniki itd.
+	\end{itemize}
+Posiada również dostęp do monitoringu logowania aktywności studentów. Prowadzący dokonuje ocen prac studentów za pośrednictwem platformy i może także przesłać informacje zwrotne. Platforma również posiada czat, który umożliwia prowadzenie rozmów w czasie rzeczywistym między studentami i prowadzącymi kurs. Platforma ta umożliwia również umieszczanie treści w postaci multimedialnej (audio, wideo itp.), co znacznie wzbogaca przekazywanie wiadomości i czyni je bardziej przystępnymi\cite{nowakowski}. 

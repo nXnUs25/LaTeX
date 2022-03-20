@@ -1,0 +1,14 @@
+\chapter{Implementacja} \label{roz:rysunki}
+
+System napisany jest w~jêzyku Java z~wykorzystaniem pakietu~\textsf{java.swing.*}, a zatem jest on niezale¿ny od platformy, na której zostanie uruchomiony. Program, który wspomaga uruchomienie i~obs³ugê tego programu to Eclipse ---~jest to platforma, która jest œrodowiskiem s³u¿¹cym do projektowania aplikacji, jak równie¿ umo¿liwiaj¹cym tworzenie w³asnych narzêdzi. 
+\newline W oparciu o poprzednie podrozdzia³y mo¿na wnioskowaæ, ¿e system sk³ada siê z trzech warstw: warstwy danych (bazy danych), warstwy biznesowej (umo¿liwiaj¹cej przetwarzanie danych) oraz warstwy prezentacji (s³u¿¹cej do komunikacji z~u¿ytkownikiem). System ten sk³ada siê zatem z~klas, które odpowiadaj¹ za poszczególne zadania systemu ---~pobierania danych od u¿ytkownika lub z~bazy, ich przetwarzania oraz wysy³ania danych na ekran. Poni¿ej zostanie przedstawiony opis systemu z~wykorzystaniem notacji UML\footnote{UML ---~Unified Modeling Language, to graficzny jêzyk do obrazowania, specyfikowania, tworzenia i~dokumentowania elementów systemów informatycznych \cite{UML}.}.
+
+%rysunek - pakiety
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=300pt]{UMLPakiety}
+		\caption{Pakiety systemu} \label{rys:UMLPakiety}
+	\end{center}
+\end{figure}
+
+System podzielony jest na pakiety (co widaæ na rysunku \ref{rys:UMLPakiety}), które grupuj¹ klasy odpowiedzialne za dzia³anie systemu. Klasy z~danych pakietów komunikuj¹ siê ze sob¹ w~celu wymiany danych potrzebnych do wygenerowania podsumowania lingwistycznego. W~pakiecie \textsf{okienka} znajduj¹ siê wszystkie klasy odpowiedzialne za komunikacjê pomiêdzy u¿ytkownikiem, a~systemem (dok³adny opis klas znajduje siê poni¿ej). Klasy z~tego pakietu odwo³uj¹ siê do klas z~pakietu \textsf{podsumowanie}, które po otrzymaniu odpowiednich danych pobranych z~bazy (poprzez klasy z~pakietu \textsf{bazaDanych} i~po przetworzeniu ich przez metody umieszczone w~klasach z~pakietu \textsf{podobienstwo} tworz¹ podsumowanie lingwistyczne wraz z~wartoœciami poprawnoœci podsumowania. Takie podsumowanie jest nastêpnie wyœwietlane u¿ytkownikowi ponownie poprzez klasy z~pakietu~\textsf{okienka}.

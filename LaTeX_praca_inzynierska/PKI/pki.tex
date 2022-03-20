@@ -1,0 +1,62 @@
+Skrót PKI oznacza \textit{infrastrukturê klucza publicznego} (ang. \textbf{Public Key Infrastructure}) i odnosi siê do rozwi¹zañ maj¹cych na celu zarz¹dzanie kluczami publicznymi u¿ytkowników. O ile bowiem wymiana zaszyfrowanej korespondencji miêdzy znajomymi nie wymaga specjalnego systemu zarz¹dzania kluczami szyfruj¹cymi, o tyle w przypadku rozwi¹zañ na wiêksz¹ skalê system taki jest konieczny. Mamy wówczas do czynienia z wiêksz¹ liczb¹ u¿ytkowników i konieczne jest rozwi¹zanie problemu bezpiecznej dystrybucji kluczy. Jak¹ mamy bowiem gwarancjê, ¿e pobrany przez nas z serwera klucz publiczny faktycznie nale¿y do danej osoby? Mo¿e mamy do czynienia z atakiem Man in the Middle? Konieczne staje siê zatem utworzenie zaufanej instytucji, która potwierdza³aby przynale¿noœæ kluczy do poszczególnych osób i organizacji. Tu pojawia siê PKI.
+
+\section{PKI w teorii...}
+PKI jest rozwi¹zaniem pozwalaj¹cym na przypisywanie u¿ytkownikom kluczy i uniemo¿liwianie fa³szerstw opartych na ich podmienianiu. Jak jednak mia³oby to dzia³aæ? Na pocz¹tek Autor przedstawia model teoretyczny.
+
+PKI zak³ada istnienie centralnej instytucji obdarzonej powszechnym zaufaniem, której zadaniem by³oby wydawanie, przechowywanie i udostêpnianie kluczy publicznych oraz udzielanie informacji o nich. Instytucjê tak¹ nazywamy centrum certyfikacji (stosuje siê równie¿ skrót CA pochodz¹cy od angielskiej nazwy \textbf{certification authority}). Ka¿dy nades³any klucz publiczny podlega procesowi certyfikacji — u¿ytkownik, który go nades³a³, proszony jest o podanie swoich danych osobowych, a te s¹ przez centrum weryfikowane. Jeœli podane informacje oka¿¹ siê prawdziwe, do klucza zostaje przypisany odpowiedni certyfikat, w którym potwierdza siê, i¿ klucz ten nale¿y do danego u¿ytkownika. Certyfikat zawiera podpis elektroniczny centrum certyfikacji, dziêki czemu ka¿dy mo¿e zweryfikowaæ jego autentycznoœæ. Jedynym warunkiem jest tutaj ogólna dostêpnoœæ klucza publicznego danego centrum.
+Klucze u¿ytkowników s¹ przechowywane w centrum certyfikacji i powszechnie udostêpniane. W ka¿dej chwili mo¿liwe jest usuniêcie w³asnego klucza z bazy danych (na przyk³ad w przypadku kompromitacji klucza prywatnego).
+
+Przedstawione rozwi¹zanie wygl¹da elegancko i sprawia wra¿enie bezpiecznego. Mamy oto zaufan¹ instytucjê umo¿liwiaj¹c¹ wszystkim bezpieczn¹ komunikacjê z u¿yciem kryptografii asymetrycznej. Rzeczywistoœæ, jak zwykle, wygl¹da nieco inaczej.
+
+\section{...i w praktyce}
+Opisany powy¿ej model PKI nie ma prawa zaistnieæ w realnym œwiecie. Rozwi¹zania stosowane w praktyce znacznie ró¿ni¹ siê od idealnego modelu. W tym rozdziale Autor wska¿e najwa¿niejsze przeszkody stoj¹ce na drodze do jego konstrukcji oraz ich wp³yw na kszta³t rzeczywistych struktur PKI.
+
+\subsection{Z³o¿onoœæ}
+Nasz idealny model zak³ada³ istnienie centralnego urzêdu certyfikacji obs³uguj¹cego wszystkich u¿ytkowników. Jeœli weŸmie siê pod uwagê potencjaln¹ liczbê tych u¿ytkowników, od razu staje siê jasne, dlaczego model taki nie ma prawa poprawnie dzia³aæ. Szacuje siê, ¿e do internetu ma dostêp ponad miliard ludzi. Do tego doliczyæ nale¿y osoby prawne (przedsiêbiorstwa, banki itp.). Byæ mo¿e nie ka¿dy u¿ytkownik bêdzie chcia³ korzystaæ z PKI, ale niektórzy bêd¹ potrzebowaæ wiêcej ni¿ jednego klucza. Takie centrum musia³oby przypisaæ ka¿demu z nich unikaln¹ nazwê powi¹zan¹ z odpowiednim kluczem. Nazwa ta powinna umo¿liwiaæ innym u¿ytkownikom jednoznaczn¹ identyfikacjê w³aœcicieli kluczy.
+
+Jest to problem praktycznie nierozwi¹zywalny. Wiele krajów wprowadzi³o numery identyfikacyjne dla swoich obywateli (przyk³adem mo¿e byæ PESEL), tu jednak mamy do czynienia z systemem identyfikacji w skali globalnej. Wykorzystanie numerów identyfikacyjnych nadanych w poszczególnych krajach nie wchodzi w rachubê z dwóch powodów — po pierwsze rozwi¹zanie to nie funkcjonuje wszêdzie, a po drugie w niektórych krajach wykorzystywanie takich danych jest zabronione przez prawo o ochronie danych osobowych.
+
+Ju¿ ta jedna przeszkoda uniemo¿liwia powo³anie ogólnoœwiatowego centrum certyfikacji. Na tym jednak nie koniec.
+
+\subsection{Zaufanie}
+Kolejny problem wynika bezpoœrednio z poprzedniego. W jaki sposób sk³oniæ wszystkich u¿ytkowników, aby zaufali naszemu centrum? Nale¿y pamiêtaæ, ¿e mamy do czynienia z dziesi¹tkami, albo nawet setkami milionów ludzi na ca³ym œwiecie. Ustanowienie instytucji, której ufaliby wszyscy, jest po prostu niemo¿liwe. Jest to o tyle istotne ¿e w wielu przypadkach certyfikowane klucze s³u¿¹ do ochrony wa¿nych transakcji handlowych. Zaufanie i pewnoœæ co do to¿samoœci drugiej strony jest tutaj podstawow¹ spraw¹.
+
+Rozwi¹zaniem powy¿szych problemów jest odejœcie od koncepcji uniwersalnego PKI na rzecz struktury rozproszonej. G³ówne centra certyfikacji podpisuj¹ certyfikaty regionalnych, te z kolei mog¹ potwierdzaæ certyfikaty jeszcze ni¿szego szczebla, itd. W ten sposób powstaje tzw. œcie¿ka certyfikacji, a wiêc lista kolejnych centrów potwierdzaj¹cych dany certyfikat. Przyk³adowa œcie¿ka certyfikacji przedstawiona zosta³a na rysunku 
+
+\textbf{\textit{Wstawiæ rysunek z Podstawy kryptografii rys. 4.72 ze s.217 lub podobny}}
+
+. Na samej górze znajduje siê g³ówne centrum (ang. \textbf{Global Sign Root CA}), poni¿ej zaœ kolejne, a¿ do tego, które bezpoœrednio podpisa³o nasz certyfikat.
+
+Takie rozwi¹zanie znacznie u³atwia organizacjê wydawania certyfikatów. Dziêki istnieniu centrów certyfikacji w poszczególnych krajach i regionach o wiele prostsza staje siê obs³uga wiêkszej liczby u¿ytkowników, a przeszkody zwi¹zane z brakiem zaufania zostaj¹ w znaczny sposób ograniczone.
+
+Istnieje jednak pewna wada takiego rozwi¹zania. Otó¿ struktura wielopoziomowa jest bardziej podatna na fa³szerstwa ni¿ struktura scentralizowana. Ka¿dy punkt w œcie¿ce certyfikacji to potencjalne miejsce ataku. Z³o¿onoœæ zawsze Ÿle wp³ywa na bezpieczeñstwo i podobnie jest równie¿ w tym przypadku. Ciekawe rozwi¹zanie tego problemu podano w
+%e wspomnianej ju¿ wy¿ej 
+ksi¹¿ce Kryptografia w praktyce: regionalne centrum podpisuje certyfikat u¿ytkownika, a nastêpnie wysy³a go do centrum g³ównego. Tam sprawdzana jest poprawnoœæ œcie¿ki certyfikacji i, jeœli przebiegnie ona poprawnie, wystawiany jest nowy certyfikat, podpisany bezpoœrednio przez tê instytucjê. Takie rozwi¹zanie rokuje pewne nadzieje, jednak jak dot¹d nie jest stosowane w praktyce.
+
+\subsection{Cykl ¿ycia klucza}
+Inny problem, przed jakim staj¹ projektanci i u¿ytkownicy PKI, zwi¹zany jest z cyklem ¿ycia kluczy. Generalnie wyró¿niæ tu mo¿na szeœæ etapów:
+\begin{itemize}
+	\item utworzenie,
+	\item certyfikacja,
+	\item rozprowadzanie,
+	\item u¿ytkowanie aktywne,
+	\item u¿ytkowanie pasywne,
+	\item uniewa¿nienie klucza.
+\end{itemize}
+Tworzenie klucza i jego certyfikacja do stosunkowo krótkie i proste etapy. Problemy zwi¹zane z wystawianiem zaufanego certyfikatu przedstawiono we wczeœniejszej czêœci tego rozdzia³u. Kolejnym etapem jest rozprowadzanie klucza zarówno przez jego w³aœciciela, jak i przez centrum certyfikacji (klucz jest umieszczany na serwerze, sk¹d ka¿dy mo¿e go pobraæ). U¿ytkowanie aktywne oznacza etap, w którym u¿ytkownik korzysta ze swojego klucza prywatnego do szyfrowania wiadomoœci, a pozostali deszyfruj¹ je kluczem publicznym. U¿ytkowanie pasywne rozpoczyna siê w momencie wycofania z u¿ytku klucza prywatnego. Bywa to na ogó³ spowodowane jego zmniejszonym bezpieczeñstwem. Mo¿e siê ono wi¹zaæ z jego kompromitacj¹ lub zbyt d³ugim okresem u¿ytkowania. Okres taki mo¿e trwaæ kilka miesiêcy lub nawet kilka lat, w zale¿noœci od przypadku. Im cenniejsze informacje chroni klucz, tym czêœciej nale¿y go zmieniaæ. Powszechn¹ praktyk¹ jest wyznaczanie limitu okreœlaj¹cego iloœæ danych, które mo¿na bezpiecznie zaszyfrowaæ danym kluczem. Po jego przekroczeniu pojawia siê ryzyko wycieku chronionych informacji (sytuacja taka bywa równie¿ okreœlana jako zmêczenie klucza). W zwi¹zku z powy¿szym w systemach przetwarzaj¹cych du¿e iloœci tajnych danych stosuje siê rozdzielanie kluczy. Polega ono na przypisywaniu osobnych kluczy do poszczególnych typów danych, osób czy zastosowañ. Dziêki temu zmniejszana jest iloœæ informacji szyfrowanych pojedynczym kluczem, co wyd³u¿a okres jego u¿ytkowania. Dodatkow¹ zalet¹ tego rozwi¹zania jest ograniczenie strat zwi¹zanych z ewentualn¹ kompromitacj¹ klucza.
+
+Warto tu równie¿ zaznaczyæ, i¿ decyzja w kwestii uniewa¿nienia klucza niekoniecznie musi zale¿eæ od w³aœciciela klucza. Centra certyfikacji czêsto wyznaczaj¹ okres wa¿noœci certyfikatu, po którym przypisany mu klucz publiczny przestaje byæ wa¿ny. Równie¿ same centra musz¹ co jakiœ czas zmieniaæ swoje klucze.
+
+Po wycofaniu klucza nastêpuje z regu³y kilkumiesiêczny okres, w trakcie którego u¿ytkownik nadal bêdzie odbiera³ zaszyfrowane nim wiadomoœci, jednak sam nie bêdzie ju¿ szyfrowa³ niczego odpowiadaj¹cym mu kluczem prywatnym. Klucz jest nadal akceptowany, dziêki czemu mo¿na zakoñczyæ wszelkie rozpoczête wczeœniej operacje. Po tym okresie klucz zostaje uniewa¿niony. I w tym miejscu zaczynaj¹ siê problemy.
+
+Uniewa¿niony certyfikat umieszczony zostaje na specjalnej liœcie CRL (lista odwo³añ certyfikatów). Ka¿dy u¿ytkownik, który chce wykorzystaæ do szyfrowania pobrany wczeœniej z serwera klucz publiczny, powinien najpierw sprawdziæ, czy klucz ów nie znajduje siê na tej liœcie. Teoretycznie jest to dobre rozwi¹zanie. W rzeczywistoœci mo¿e ono rodziæ liczne problemy.
+
+Po pierwsze zablokowanie dostêpu do bazy CRL uniemo¿liwi sprawdzenie wa¿noœci kluczy. Mo¿e to nast¹piæ w wyniku awarii lub ataku typu DoS. W konsekwencji niewa¿ny klucz publiczny bêdzie ponownie wykorzystywany. Tworzenie rozproszonej bazy CRL jest z kolei rozwi¹zaniem bardzo kosztownym.
+
+Po drugie samo istnienie takiej bazy nie spowoduje, i¿ ludzie posiadaj¹cy uniewa¿niony certyfikat nagle zdadz¹ sobie sprawê z jego nieprzydatnoœci. Pozostanie on nadal w u¿ytku, poniewa¿ ma³o kto zadaje sobie trud regularnego sprawdzania wa¿noœci posiadanych certyfikatów. Mówi¹c krótko, niemo¿liwe jest dostarczenie informacji o uniewa¿nieniu certyfikatu do wszystkich jego posiadaczy.
+
+Pojawiaj¹ siê równie¿ inne problemy zwi¹zane z u¿ytkowaniem certyfikatów. Liczne zarzuty s¹ wysuwane na przyk³ad wobec standardu x.509 (powszechnie u¿ywanego w Polsce).
+%Wiêcej informacji na ten temat znajduje siê w artykule X.509 Style Guide (patrz Bibliografia). 
+Mo¿na wskazaæ tu równie¿ trudnoœci zwi¹zane ze struktur¹ certyfikatu i jego kompatybilnoœci¹ z przegl¹darkami internetowymi. W Polsce swego czasu pojawi³y siê problemy z certyfikatami niektórych banków internetowych, które by³y rozpoznawane jako niewa¿ne przez przegl¹darkê Internet Explorer. Winny wszystkiemu by³ b³¹d w przegl¹darce. Opracowano stosown¹ aktualizacjê i certyfikaty znów s¹ poprawnie weryfikowane.
+
+PKI jest œwietnym przyk³adem na to, jak wa¿ne jest odpowiednie zastosowanie opracowanych mechanizmów kryptograficznych. Z³e rozwi¹zanie strukturalne mo¿e naraziæ na szwank teoretycznie solidny system bezpieczeñstwa. Jest to jednak bardziej kwestia odpowiedniej organizacji ni¿ kryptografii, dlatego Autor nie bêdzie siê szerzej rozpisywaæ na ten temat.

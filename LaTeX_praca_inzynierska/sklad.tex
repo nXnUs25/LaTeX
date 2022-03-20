@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{report}
+
+% pakiety dla jêzyka polskiego
+\usepackage{polski}
+\usepackage[cp1250]{inputenc}
+
+% pakiet odpowiedzialny za linki
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=red,citecolor=green]{hyperref}
+
+%\pagestyle{plain}
+%\usepackage[pdftex]{color,graphics}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+%1,5 linii odstêpu
+\linespread{1.3}
+
+% ********************* pocz¹tek dokumentu ***********************
+\begin{document}
+
+%	\pagestyle{fancy}
+	\cfoot{\thepage}
+
+% ********************* Tworzy spis treœci ***********************
+	\tableofcontents
+	\newpage
+
+% ****************************************************************
+% Wstêp
+\section{Wstêp} \label{roz:wstep}
+	\input{wstep//wstep.tex}
+	\newpage
+
+% Cel pracy
+\section{Cel pracy} \label{roz:cel_pracy}
+	\input{cel_pracy//cel_pracy.tex}
+
+% Struktura pracy
+\section{Struktura pracy} \label{roz:struktura_pracy}
+	\input{struktura//struktura.tex}
+
+% Rozdzia³ 1
+\chapter{Pocz¹tek...} \label{roz:rozdzial_1}
+	\input{kryptografia//kryptografia.tex}
+	
+% Rozdzia³ 2
+\chapter{Infrastruktura klucza publicznego} \label{roz:pki}
+	\input{PKI//pki.tex}
+
+%Rozdzia³ 3
+\chapter{Jêzyk XML} \label{roz:jezyk_xml}
+	\input{jezykXML//jezykXML.tex}
+
+% Rozdzia³ ostatni
+\chapter{Zakoñczenie}
+To ju¿ jest koniec! Nie ma ju¿ nic, jesteœmy wolni, mo¿emy iœæ!!!
+
+% ********************* Bibliografia *********************
+\begin{thebibliography}{99}
+	\bibitem{podstawy_kryptografii_karbowski} Karbowski M., \textit{Podstawy kryptografii}, Wydanie II, Helion, Gliwice 2008
+	\bibitem{xml_na_powaznie} Kazienko P. Gwiazda K., \textit{XML na powa¿nie}, Helion, Gliwice 2002
+	\bibitem{xml_signature_syntax} XML Signature Syntax and Processing (Second Edition) \textit{\href{http://www.w3.org/TR/xmldsig-core/}{http://www.w3.org/TR/xmldsig-core/}}, paŸdziernik 2010, dostêpna online
+	\bibitem{wiki_podpis_cyfrowy} Strona internetowa Wikipedia.pl 
+\textit{\href{http://pl.wikipedia.org/wiki/Podpis_cyfrowy}{{http://pl.wikipedia.org/wiki/Podpis\_cyfrowy}}}, paŸdziernik 2010, dostêpna online
+	\bibitem{vpn_svera} Adres strony internetowej z której pochodz¹ obrazki schematu klucza symetrycznego i asymetrycznego \textit{\href{http://vpn.svera.pl/szyfry.php}{http://vpn.svera.pl/szyfry.php}}
+\end{thebibliography}
+
+% ********************* Tworzy spis rysunków *********************
+	\listoffigures
+
+% ******************** Tworzy spis tabel *************************
+	\listoftables
+
+\end{document}

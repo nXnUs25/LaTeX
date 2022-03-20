@@ -1,0 +1,201 @@
+\chapter{Elementy teorii zbiorów} \label{roz:zbiory}
+
+W~rozdziale przedstawiono podstawowe informacje o~zbiorach w~ujêciu tradycyjnym np.~\cite{Rasiowa}, o~zbiorach rozmytych np.~\cite{Bandemer, Buckley, Leski, Rutkowscy, Zadeh}. Nie nale¿y jednak tego rozdzia³u traktowaæ jako kompendium wiedzy, poniewa¿ znajduj¹ siê w~nim tylko podstawowe informacje o~zbiorach niezbêdne w~dalszej czêœci pracy.
+
+\section{Zbiory w ujêciu klasycznym}
+
+%definicja zbioru
+\begin{definicja}
+	Przez zbiór rozumie siê grupê obiektów o~pewnych w³asnoœciach wyró¿niaj¹cych je spoœród innych obiektów. 
+	Obiekty z~tej grupy s¹ elementami zbioru, a~zatem musz¹ spe³niaæ pewn¹ w³asnoœæ charakterystyczn¹ dla danego 
+	zbioru:
+	\begin{equation}
+		Z = \{x \in X:\mu_C(x)\}
+	\end{equation}
+	gdzie:\\
+	\indent	$X = \{x\}$ jest zbiorem wszystkich mo¿liwych obiektów, zwanych przestrzeni¹,\\
+	\indent $\mu_C(x)$ jest funkcj¹ charakterystyczn¹, okreœlaj¹c¹ przynale¿noœæ do zbioru, tzn.
+	\begin{equation}
+		\mu_C(x)=
+			\left\{
+				\begin{array}{ll}
+					1, & \mbox{gdy $x \in Z$} \\
+					0, & \mbox{gdy $x \not\in Z$}
+				\end{array}
+			\right.
+	\end{equation}
+\end{definicja}
+
+%przyk³ad zbioru
+\begin{przyklad}
+	Dany jest zbiór $A$ okreœlaj¹cy wielkoœæ firmy na podstawie liczby zatrudnionych pracowników. Rozpatrzmy przynale¿noœæ do zbioru {\em mikro}-firma, dla której funkcja charakterystyczna ma postaæ\footnote{wielkoœci zdefiniowane na podstawie rozporz¹dzeñ Unii Europejskiej}: 
+	\begin{displaymath}
+		\mu_A(x)=
+			\left\{
+				\begin{array}{ll}
+					1, & \mbox{gdy $5 < x < 15$} \\
+					0, & \mbox{gdy le¿y poza powy¿szym przedzia³em}
+				\end{array}
+			\right..
+	\end{displaymath}
+Zatem firma maj¹ca wiêcej ni¿ $5$ i~mniej ni¿ $15$ pracowników nale¿y do grupy firm typu {\em mikro} poniewa¿ $\mu_A(5-15)=1$, natomiast dla firm o~liczbie pracowników mniejszej ni¿ $5$ i wiêkszej ni¿ $15$ pracowników przynale¿noœæ do zbioru wynosi~$0$ (bo $\mu_A(<5 \ i \ >15)=0$), zatem ta ta firma nie nale¿y do zbioru {\em mikro}.
+\end{przyklad}
+
+%definicja zawierania zbiorów
+\begin{definicja}
+	Zbiór $A$ jest zawarty w~zbiorze $B$ ($A \subset B$) wtedy i~tylko wtedy, gdy ka¿dy element zbioru $A$ jest elementem zbioru $B$, co zapisujemy:
+	\begin{equation}
+		A \subset B \Leftrightarrow \{x: x \in A \Rightarrow x \in B\}
+	\end{equation}
+\end{definicja}
+
+%defincja równoœci zbiorów
+\begin{definicja}
+	Zbiory $A$ i~$B$ s¹ równe, gdy ka¿dy element zbioru $A$ jest elementem zbioru~$B$.
+	\begin{equation}
+		\forall_x (x \in A \Leftrightarrow x \in B)
+	\end{equation}
+\end{definicja}
+
+%definicja sumy zbiorów
+\begin{definicja}
+	Przez sumê zbiorów $A$ i~$B$ (oznaczmy j¹ $A \cup B$) rozumiemy zbiór, którego elementami s¹ wszystkie 
+	elementy zbioru $A$ i~wszystkie elementy zbioru $B$, ponadto zbiór ten nie zawiera innych elementów, czyli:
+	\begin{equation}
+		A \cup B = \{x: x \in A \vee x \in B\}
+	\end{equation}
+	Inaczej mo¿na to zapisaæ, ¿e:
+	\begin{equation}
+		(A \cup B)(x) = max \{\mu_A(x), \mu_B(x)\}	
+	\end{equation}
+\end{definicja}
+
+%definicja iloczynu zbiorów
+\begin{definicja}
+	Przez iloczyn zbiorów $A$ i~$B$ (oznaczmy go $A \cap B$) rozumiemy czêœæ wspóln¹ zbiorów, czyli zbiór
+	zawieraj¹cy te i~tylko te elementy, które nale¿¹ jednoczeœnie do zbioru $A$	i~zbioru $B$, czyli:
+	\begin{equation} 			
+		A \cap B = \{x: x \in A \wedge x \in B\}
+	\end{equation}
+	lub:
+	\begin{equation}
+		(A \cap B)(x) = min \{\mu_A(x), \mu_B(x)\}
+	\end{equation}
+\end{definicja}
+
+%przyk³ad na sumê i iloczyn zbiorów
+\begin{przyklad}	\label{przyk:sumaIloczyn}
+	Dany jest zbiór $A$ okreœlaj¹cy wielkoœæ {\em mikro}-firmy na podstawie liczby zatrudnionych pracowników
+	\begin{displaymath}
+		\mu_A(x)=
+			\left\{
+					\begin{array}{ll}
+					1, & \mbox{gdy $5 < x \leq 15$} \\
+					0, & \mbox{gdy le¿y poza powy¿szym przedzia³em}
+				\end{array}
+			\right.
+	\end{displaymath}
+  oraz zbiór $B$ definiuj¹cy {\em œrednie}-firmy równie¿ na podstawie liczby zatrudnionych pracowników
+	\begin{displaymath}
+		\mu_B(x)=
+			\left\{
+				\begin{array}{ll}
+					1, & \mbox{gdy $14 < x < 50$} \\
+					0, & \mbox{gdy le¿y poza powy¿szym przedzia³em}
+				\end{array}
+			\right.
+	.\end{displaymath}
+	Sum¹ zbiorów $A$ i $B$ jest zbiór $C$, do którego nale¿¹ {\em mikro} i~{\em œrednie} firmy, dla których 
+	liczba zatrudnionych pracowników jest z~przedzia³u~$[5-50]$, poniewa¿
+	\begin{displaymath}
+		\mu_{A \cup B}(x)=
+			\left\{
+				\begin{array}{ll}
+					1, & \mbox{gdy $5 < x < 50$} \\
+					0, & \mbox{gdy le¿y poza powy¿szym przedzia³em}
+				\end{array}
+			\right.
+	.\end{displaymath}
+	Natomiast iloczyn tych dwóch zbiorów to firmy zatrudniaj¹ce dok³adnie $15$ pracowników, poniewa¿ 
+	\begin{displaymath}
+		\mu_{A \cap B}(x)=
+			\left\{
+				\begin{array}{ll}
+					1, & \mbox{gdy $x = 15$} \\
+					0, & \mbox{gdy le¿y poza powy¿szym przedzia³em}
+				\end{array}
+			\right.
+	.\end{displaymath}
+\end{przyklad}
+
+%definicja dope³nienia
+\begin{definicja}
+	Dope³nieniem zbioru $A$ (oznaczamy je $\neg A$) w~przestrzeni $X$ ($A \subset X$) nazywamy zbiór wszystkich 
+	elementów, które nie nale¿¹ do zbioru $A$, czyli:
+	\begin{equation}
+		\neg A = \{x: x \in X \wedge x \not \in A\}
+	\end{equation}
+	Stosuj¹c zapis dla funkcji charakterystycznych dope³nienie zbioru $A$ mo¿na zapisaæ jako:
+	\begin{equation}
+		\mu_{\neg A} = 1 - \mu_A(x)
+	\end{equation}
+\end{definicja}
+
+%przyk³ad dope³nienia
+\begin{przyklad}
+	Dany jest zbiór $A$ {\em mikro}-firm, dla którego funkcja charakterystyczna ma postaæ jak w~Przyk³adzie \ref{przyk:sumaIloczyn}. Dope³nieniem tego zbioru bêd¹ firmy nie nale¿¹ce do tego zbioru, a~zatem firmy zatrudniaj¹ce wiêcej ni¿ $15$ i~mniej ni¿ $5$ pracowników.
+\end{przyklad}
+
+%definicja pary uporz¹dkowanej
+\begin{definicja}
+	Zbiór postaci $\{a, b\}$ nazywamy uporz¹dkowan¹ par¹ elementów $a$ i~$b$.
+\end{definicja}
+
+%definicja iloczynu kartezjañskiego
+\begin{definicja}
+	Niech dane bêd¹ dwa zbiory $A$ i~$B$. Zbiór z³o¿ony ze wszystkich par uporz¹dkowanych postaci $<a, b>$ takich, ¿e $a \in A$ i $b \in B$ nazywamy iloczynem kartezjañskim zbiorów $A$ i~$B$ i~oznaczamy $A \times B$.
+\end{definicja}
+\vspace{6pt}
+%w³asnoœci na zbiorach
+{\bf Podstawowe w³asnoœci zbiorów klasycznych:}
+%\newline W³asnoœæ przemiennoœci zdefiniowana nastêpuj¹co:  \index{zbiór!klasyczny!przemiennoœæ}
+\begin{itemize}
+	\item W³asnoœæ przemiennoœci zdefiniowana nastêpuj¹co:  \index{zbiór!klasyczny!przemiennoœæ}
+			\begin{equation} \label{wzor:przemiennoscZbiorKlasyczny}
+				\begin{array}{c}
+					A \cup B = B \cup A\\
+					A \cap B = B \cap A
+				\end{array}
+			\end{equation}
+		U¿ywaj¹c funkcji charakterystycznych powy¿sz¹ w³asnoœæ mo¿na zapisaæ nastêpuj¹co:
+			\begin{equation}
+				(A \cup \neg A)(x) = max \{\mu_A(x), 1-\mu_A\} = 1
+			\end{equation} 	
+	\item Prawo ³¹cznoœci: \index{zbiór!klasyczny!³¹cznoœæ}
+			\begin{equation} 	\label{wzor:lacznoscZbiorKlasyczny}
+					(A \cup B) \cup C = A \cup (B \cup C)
+			\end{equation}
+	\item Prawo rozdzielnoœci: \index{zbiór!klasyczny!rozdzielnoœæ}
+			\begin{equation} \label{wzor:rozdzielonoscZbiorKlasyczny}
+				(A \cup B) \cap C = (A \cap C) \cup (B \cap C)
+			\end{equation}
+	\item Prawo dope³nienia: \index{zbiór!klasyczny!dope³nienie}
+			\begin{equation}
+				\begin{array}{c}
+					A \cup \neg A = X \\
+					A \cap \neg A = \oslash 
+				\end{array}
+			\end{equation}
+		Zapis przy u¿yciu funkcji charakterystycznych:
+			\begin{equation}
+				(A \cap -A)(x) = min \{\mu_A(x), 1 - \mu_A(x)\} = 0
+			\end{equation}
+\end{itemize}
+
+%definicja relacji
+\begin{definicja}
+	Relacj¹ $\varsigma$ ze zbioru $A$ w~zbiór $B$ nazywamy podzbiór bêd¹cy iloczynem kartezjañskim $A \times B$.
+	Je¿eli $<a, b> \in \varsigma$, to mówimy, ¿e $a$ jest w~relacji $\varsigma$ z~elementem $b$, co zapisujemy 
+	$a \varsigma b$.
+\end{definicja}
+

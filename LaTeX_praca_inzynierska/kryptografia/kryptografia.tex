@@ -1,0 +1,120 @@
+Na pocz¹tku by³o pismo wykszta³cone niezale¿nie w wielu kulturach stanowi³o niezbadan¹ tajemnicê dla tych, którzy nie potrafili czytaæ. Szybko jednak zrodzi³a siê koniecznoœæ ukrycia informacji równie¿ przed tymi, którym umiejêtnoœæ ta nie by³a obca. Najbardziej oczywistym rozwi¹zaniem by³o schowanie tajnej wiadomoœci przed ludŸmi, którzy mogliby j¹ odczytaæ. Takie zabiegi wkrótce jednak przesta³y wystarczaæ. Wiadomoœæ mog³a zostaæ odnaleziona podczas wnikliwego przeszukania, a wtedy tajne informacje dosta³yby siê w rêce wroga. A gdyby uda³o siê napisaæ list dzia³aj¹cy na zasadzie „drugiego dna"? Z pozoru zawiera³by on b³ahe treœci, jednak jeœli adresat wiedzia³by, gdzie i jak szukaæ, móg³by dotrzeæ do „mniej niewinnych" informacji. Tak narodzi³a siê steganografia.
+
+\section{Steganografia}
+\textit{Steganografia} to ogó³ metod ukrywania tajnych przekazów w wiadomoœciach, które nie s¹ tajne. Jej nazwa wywodzi siê od greckich s³ów: \textit{steganos} (ukryty) oraz \textit{graphein} (pisaæ). W przesz³oœci stosowano wiele wymyœlnych sposobów osi¹gniêcia tego efektu. Popularny niewidzialny atrament to jeden z najbardziej znanych przyk³adów steganografii. Pierwsze zapiski na temat stosowania tej sztuki znaleŸæ mo¿na ju¿ w ksiêgach z V wieku p.n.e. Przyk³adem mo¿e byæ opisana przez Herodota historia Demaratosa, Greka, który ostrzeg³ Spartan przed przygotowywan¹ przeciw nim ofensyw¹ wojsk perskich. Nie móg³ on wys³aæ oficjalnej wiadomoœci do króla, zeskroba³ wiêc wosk z tabliczki i wyry³ tekst w drewnie. Nastêpnie ponownie pokry³ tabliczkê woskiem i wrêczy³ pos³añcowi. Czysta tabliczka nie wzbudzi³a podejrzeñ perskich patroli i bezpiecznie dotar³a do celu. Tam, co prawda, d³ugo g³owiono siê nad jej znaczeniem, wkrótce jednak ¿ona spartañskiego wodza Leonidasa wpad³a na pomys³ zeskrobania wosku, co pozwoli³o odkryæ tajn¹ wiadomoœæ.
+
+W miarê postêpu technicznego, a tak¿e rozwoju samej steganografii, powstawa³y coraz wymyœlniejsze metody ukrywania wiadomoœci. Znana jest na przyk³ad metoda ukrywania wiadomoœci w formie kropki w tekœcie drukowanym, stosowana podczas II wojny œwiatowej. Wiadomoœæ by³a fotografowana, a klisza pomniejszana do rozmiarów oko³o $mm^2$ i naklejana zamiast kropki na koñcu jednego ze zdañ w liœcie. Obecnie bardzo popularne jest ukrywanie wiadomoœci w plikach graficznych. Kolejne przyk³ady mo¿na mno¿yæ, jednak nawet najbardziej wymyœlne z nich nie gwarantuj¹, i¿ wiadomoœæ nie zostanie odkryta. Koniecznoœci¹ sta³o siê zatem wynalezienie takiego sposobu jej zapisywania, który gwarantowa³by tajnoœæ nawet w przypadku przechwycenia przez osoby trzecie.
+
+\section{Kryptografia}
+Nazwa \textit{kryptografia} równie¿ wywodzi siê z jêzyka greckiego (od wyrazów \textit{kryptos} — ukryty i \textit{graphein} — pisaæ). Jej celem jest utajnienie znaczenia wiadomoœci, a nie samego faktu jej istnienia. Podobnie jak w przypadku steganografii, data jej powstania jest trudna do okreœlenia. Najstarsze znane przyk³ady przekszta³cenia pisma w formê trudniejsz¹ do odczytania pochodz¹ ze staro¿ytnego Egiptu, z okresu oko³o 1900 roku p.n.e. Pierwsze tego typu zapisy nie s³u¿y³y jednak ukrywaniu treœci przed osobami postronnymi, a jedynie nadaniu napisom formy bardziej ozdobnej lub zagadkowej. Skrybowie zapisuj¹cy na œcianach grobowców historie swych zmar³ych panów œwiadomie zmieniali niektóre hieroglify, nadaj¹c napisom bardziej wznios³¹ formê. Czêsto celowo zacierali ich sens, zachêcaj¹c czytaj¹cego do rozwi¹zania zagadki. Ten element tajemnicy by³ wa¿ny z punktu widzenia religii. Sk³ania³ on ludzi do odczytywania epitafium i tym samym do przekazania b³ogos³awieñstwa zmar³emu. Nie by³a to kryptografia w œcis³ym tego s³owa znaczeniu, zawiera³a jednak dwa podstawowe dla tej nauki elementy — przekszta³cenie tekstu oraz tajemnicê.
+
+Na przestrzeni kolejnych 3000 lat rozwój kryptografii by³ powolny i dosyæ nierówny. Powstawa³a ona niezale¿nie w wielu krêgach kulturowych, przybieraj¹c ró¿ne formy i stopnie zaawansowania. Zapiski na temat stosowania szyfrów znaleziono na pochodz¹cych z Mezopotamii tabliczkach z pismem klinowym. Ich powstanie datuje siê na 1500 rok p.n.e. W II w. p.n.e. grecki historyk Polibiusz opracowa³ system szyfrowania oparty na tablicy przyporz¹dkowuj¹cej ka¿dej literze parê cyfr (tabela~\ref{tab:TablicaPolibiusza}).
+\begin{table}
+	\centering
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			  & 1 & 2 & 3 & 4 & 5 \\ \hline
+			1 & A & B & C & D & E \\ \hline
+			2 & F & G & H & I/J & K \\ \hline
+			3 & L & M & N & O & P \\ \hline
+			4 & Q & R & S & T & U \\ \hline
+			5 & V & W & X & Y & Z \\ \hline
+		\end{tabular}
+	\caption{Tablica Polibiusza}
+	\label{tab:TablicaPolibiusza}
+\end{table}
+W póŸniejszych czasach tablica ta sta³a siê podstaw¹ wielu systemów szyfrowania. Przekszta³cenie liter w liczby dawa³o mo¿liwoœæ wykonywania dalszych przekszta³ceñ za pomoc¹ prostych obliczeñ lub funkcji matematycznych. Metodê Polibiusza uzupe³nion¹ kilkoma dodatkowymi utrudnieniami kryptoanalitycznymi zastosowa³a miêdzy innymi niemiecka armia przy opracowywaniu wspomnianego na wstêpie systemu szyfruj¹cego ADFGX oraz jego udoskonalonej wersji ADFGVX.
+
+Pierwsze wzmianki dotycz¹ce stosowania kryptografii w celach politycznych pochodz¹ z V w. p.n.e. z Indii. Wymieniana jest ona jako jeden ze sposobów zdobywania informacji przez przebywaj¹cych za granic¹ ambasadorów. Sekretne pismo wspomniane jest równie¿ w s³ynnej Kamasutrze — figuruje tam jako jedna z 64 sztuk, które kobieta powinna znaæ.
+
+Ogólnie stosowane w staro¿ytnoœci metody kryptografii mo¿na podzieliæ na dwa rodzaje — przestawianie i podstawianie. W pierwszym przypadku nastêpowa³a zamiana szyku liter w zdaniach, czyli, innymi s³owy, tworzony by³ anagram. Przyk³adem szyfrowania przestawieniowego jest pierwsze znane urz¹dzenie szyfruj¹ce — \textit{spartañska scytale} z V w. p.n.e. Mia³a ona kszta³t prêta o podstawie wielok¹ta, na który nadawca nawija³ skórzany pas. Wiadomoœæ pisana by³a wzd³u¿ prêta, po czym odwijano pas, na którym widaæ by³o tylko pozornie bezsensown¹ sekwencjê liter. Potem goniec przenosi³ list do adresata, stosuj¹c czasem steganograficzne sztuczki, na przyk³ad opasuj¹c siê nim i ukrywaj¹c tekst po wewnêtrznej stronie. Odczytanie wiadomoœci by³o mo¿liwe przy u¿yciu scytale o takiej samej gruboœci, jak¹ mia³ prêt nadawcy.
+
+Druga, bardziej popularna metoda polega³a na podstawianiu za litery tekstu jawnego innych liter b¹dŸ symboli. Za przyk³ad mo¿e tu pos³u¿yæ szyfr Cezara, najs³ynniejszy algorytm szyfruj¹cy czasów staro¿ytnych (jego twórc¹ by³ Juliusz Cezar). Szyfr ten opiera³ siê na zast¹pieniu ka¿dej litery inn¹, po³o¿on¹ o trzy miejsca dalej w alfabecie. W ten sposób na przyk³ad wiadomoœæ o treœci Cesar przekszta³ca siê w Fhvdu. Adresat znaj¹cy sposób szyfrowania w celu odczytania wiadomoœci zastêpowa³ ka¿d¹ literê tekstu tajnego liter¹ po³o¿on¹ o trzy miejsca wczeœniej w alfabecie.
+
+% Szyfr Cezara - rysunek do wstawienia
+
+Szyfry przyporz¹dkowuj¹ce ka¿dej literze alfabetu jawnego dok³adnie jedn¹ literê, kombinacjê cyfr lub symbol nazywamy szyframi monoalfabetycznymi. W przypadku szyfru Cezara uk³ad alfabetu tajnego zawsze pozostawa³ ten sam. Znacznie bezpieczniejszym rozwi¹zaniem by³o dokonywanie w nim okresowych zmian tak, aby znajomoœæ metody szyfrowania nie wystarcza³a do odczytania wiadomoœci.
+
+Stanowi³o to jednak utrudnienie równie¿ dla adresata. Musia³ on dodatkowo posiadaæ klucz (uk³ad liter lub symboli w alfabecie tajnym). Tak powsta³ najwiêkszy problem w historii kryptografii — dystrybucja klucza. Raz przechwycony klucz stawa³ siê bezu¿yteczny, gdy¿ wiadomoœci szyfrowane za jego pomoc¹ nie by³y ju¿ bezpieczne. O ile w przypadku wymiany wiadomoœci miêdzy dwiema osobami nie by³a to z regu³y du¿a przeszkoda (wystarczy³o ustaliæ nowy klucz), o tyle w przypadku szyfrowania na potrzeby wojskowe rodzi³o to bardzo wiele problemów. Trzeba by³o dostarczyæ nowy klucz do wszystkich jednostek i to mo¿liwie szybko, gdy¿ ka¿da przechwycona przez wroga wiadomoœæ stawa³a siê dla niego ³atwa do odczytania.
+
+Istniej¹ dwie podstawowe grupy algorytmów szyfrowania.
+
+% ----------------------------------------------------------------------------
+
+\section{Szyfry z kluczem symertycznym} \label{roz:szyfr_sym}
+Przy szyfrowaniu wiadomoœci kluczem symertycznym, klucz u¿ywany do jej zaszyfrowania jest identyczny z kluczem wymaganym do ich odszyfrowania (rys. \ref{rys:klucz_symetryczny}). Oznacza to, ¿e najpierw nadawca i odbiorca musz¹ wspólnie okreœliæ klucz, jakiego bêd¹ u¿ywaæ do szyfrowania korespondencji miêdzy sob¹. Oznacza to, ¿e przy korespondencji z np. 10 kontrahentami musimy posiadaæ 10 ró¿nych kluczy, co mo¿e stanowiæ problem z okreœleniem, który klucz powinniœmy u¿yæ. Globalnie oznacza to, ¿e dla np. 10 osób trzeba wygenerowaæ a¿ 45 ró¿nych kluczy, ale przy np. 100 osobach ju¿ trzeba wygenerowaæ 4950 ró¿nych kluczy.
+
+%rysunek - klucz symetryczny
+\begin{figure}
+	\begin{center}
+		\includegraphics{kryptografia//rysunki//klucz_sym.jpg}
+		\caption{Schemat szyfrowania kluczem symetrycznym. ród³o \cite{vpn_svera}} \label{rys:klucz_symetryczny}
+	\end{center}
+\end{figure}
+
+% ----------------------------------------------------------------------------
+
+\section{Szyfry z kluczem asymertycznym} \label{roz:szyfr_asym}
+W algorytmach szyfrowania asymetrycznego klucze szyfrowania i deszyfracji s¹ ró¿ne i s¹ w posiadaniu ró¿nych osób (rys. \ref{rys:klucz_asymetryczny}). Oznacza to, ¿e ka¿da osoba chc¹ca szyfrowaæ wiadomoœci musi posiadaæ dwa klucze, \textbf{publiczny} i \textbf{prywatny}. Jak sama nazwa wskazuje klucz publiczny jest udostêpniany wszystkim zainteresowanym, natomiast klucz prywatny musi pozostaæ tany. Zalet¹ szyfrowania asymetrycznego jest to, ¿e ka¿da osoba musi posiadaæ jeden klucz prywatny (swój) oraz klucze publiczne osób, z którymi chce korespondowaæ. Oznacza to, ¿e musimy posiadaæ mniejsz¹ iloœæ kluczy ni¿ w przypadku szyfrowania kluczem symetrycznym. Globalnie oznacza to, ¿e dla np. 10 osób trzeba wygenerowaæ tylko 20 kluczy, a dla np. 100 osób tych kluczy potrzeba wygenerowaæ tylko 200. Jak widaæ ró¿nica w liczbie generowanych kluczy jest kolosalna, dlatego obecnie na œwiecie sposób ten jest najczêœciej stosowany.
+
+%rysunek - klucz asymetryczny
+\begin{figure}
+	\begin{center}
+		\includegraphics{kryptografia//rysunki//klucz_asym.jpg}
+		\caption{Schemat szyfrowania kluczem asymetrycznym. ród³o \cite{vpn_svera}} \label{rys:klucz_asymetryczny}
+	\end{center}
+\end{figure}
+
+% ----------------------------------------------------------------------------
+
+\section{Podpis cyfrowy}
+\textbf{Podpis cyfrowy} jest to matematyczny sposób potwierdzania autentycznoœci cyfrowego dokumentu. Istnieje wiele schematów podpisów cyfrowych, obecnie jednak najpopularniejszym jest schemat podpisu dokumentów cyfrowych w~systemach kryptograficznych z kluczem publicznym i jednokierunkow¹ funkcj¹ skrótu - w systemie tym do oryginalnej wiadomoœci do³¹czany jest skrót dokumentu, zaszyfrowany prywatnym kluczem nadawcy. Potwierdzenie autentycznoœci wiadomoœci jest mo¿liwe po odszyfrowaniu skrótu kluczem publicznym nadawcy i porównaniu go z wytworzonym skrótem odebranego dokumentu \cite{wiki_podpis_cyfrowy}.
+
+Podpisywanie siê pod dokumentami jest nieod³¹czn¹ czêœci¹ handlu. Wraz z rozwojem handlu elektronicznego narodzi³a siê potrzeba opracowania elektronicznych odpowiedników podpisów. Protoko³y podpisu elektronicznego s¹ prób¹ rozwi¹zania tego problemu. W Polsce prace nad wprowadzeniem podpisu elektronicznego ruszy³y na pocz¹tku roku 2001. Odpowiednia ustawa zosta³a uchwalona 18 wrzeœnia tego samego roku. Kolejny rok zajê³o wprowadzanie odpowiednich aktów wykonawczych, w wyniku czego oficjalnie w polskim prawie podpis elektroniczny funkcjonuje dopiero od 16 sierpnia 2002. Powsta³o kilka Centrów Certyfikacji pozwalaj¹cych na wyrobienie certyfikatu niezbêdnego do wykonywania podpisów elektronicznych.
+
+Podobnie jak w przypadku pozosta³ych protoko³ów, najpierw trzeba siê zastanowiæ, jakie warunki musi spe³niaæ poprawnie wykonany podpis elektroniczny. Dopiero wtedy mo¿na zacz¹æ myœleæ nad zastosowaniem konkretnych mechanizmów kryptograficznych.
+Z pewnoœci¹ podpis powinien jednoznacznie wskazywaæ na to¿samoœæ podpisuj¹cego. Ponadto powinien byæ niepodrabialny. Osoba podpisuj¹ca nie mo¿e póŸniej wyprzeæ siê z³o¿onego podpisu, jak równie¿ zmieniæ treœci podpisanego dokumentu. Wreszcie sam podpis nie mo¿e zostaæ u¿yty po raz drugi, ani te¿ przeniesiony na inny dokument.
+
+W protoko³ach podpisu cyfrowego powy¿sze zadania s¹ realizowane przy u¿yciu kryptografii asymetrycznej oraz jednokierunkowych funkcji skrótu. S¹ to funkcje jednokierunkowe, generuj¹ce jako wynik skrót o okreœlonej d³ugoœci. Innymi s³owy dla dowolnie d³ugiej wiadomoœci (nieprzekraczaj¹cej limitu wyznaczonego dla danego algorytmu) wynik bêdzie mia³ zawsze ten sam rozmiar (na przyk³ad 160 bitów). Jest to bardzo przydatna w³aœciwoœæ, poniewa¿ czêsto podpisywane dokumenty maj¹ doœæ spore rozmiary. Bez funkcji skrótu obliczenia konieczne do wykonania podpisu znacznie by siê wyd³u¿a³y. Podpisywanie skrótu wiadomoœci trwa natomiast o wiele krócej.
+
+Wygenerowany skrót wiadomoœci podpisywany jest z wykorzystaniem klucza prywatnego u¿ytkownika. Umo¿liwia to ka¿demu, kto ma dostêp do odpowiedniego klucza publicznego, zweryfikowanie to¿samoœci podpisuj¹cego. Zmiana treœci dokumentu uniemo¿liwi weryfikacjê podpisuj¹cego, a samego podpisu nie mo¿na przenieœæ na inny dokument.
+
+Opisana procedura to „klasyczny" protokó³ podpisu cyfrowego. W zale¿noœci od potrzeb tworzone s¹ równie¿ inne rozwi¹zania. Poni¿ej Autor podaje niektóre z nich.
+
+\subsection{Niezaprzeczalne podpisy cyfrowe}
+Nazwa tego typu protoko³ów mo¿e byæ nieco myl¹ca, poniewa¿ protoko³y niezaprzeczalne (oprócz tradycyjnej funkcji podpisywania dokumentów) uniemo¿liwiaj¹ weryfikacjê podpisu bez zgody podpisuj¹cego. Wi¹¿e siê ona jednak z tym, i¿ podpisuj¹cy nie mo¿e siê równie¿ wyprzeæ swojego podpisu. Protokó³ tego typu przebiega w nastêpuj¹cy sposób:
+\begin{itemize}
+	\item U¿ytkownik A przedstawia u¿ytkownikowi B dokument wraz z wykonanym przez siebie podpisem.
+	\item U¿ytkownik B generuje liczbê losow¹ i przesy³a j¹ do u¿ytkownika A.
+	\item U¿ytkownik A dokonuje przekszta³cenia otrzymanej liczby w oparciu o swój klucz prywatny. Przekszta³cenie to jest dosyæ zawi³e matematycznie, najwa¿niejszy jednak jest fakt, i¿ uzyskanie poprawnego (pasuj¹cego do podpisu) wyniku jest mo¿liwe tylko przy wykorzystaniu klucza prywatnego osoby podpisuj¹cej.
+	\item U¿ytkownik A wysy³a wynik obliczeñ do u¿ytkownika B.
+	\item Nastêpuje weryfikacja podpisu.
+\end{itemize}
+Mimo wra¿liwoœci na ataki typu Man in the Middle protoko³y tego typu znajduj¹ liczne zastosowania ze wzglêdu na mo¿liwoœæ kontrolowania procesu weryfikacji przez osobê podpisuj¹c¹ dokument. Dodatkowe podprotoko³y pozwalaj¹ na dowodzenie autentycznoœci podpisów lub uniemo¿liwiaj¹ wypieranie siê ich.
+
+Przyk³adowe algorytmy realizuj¹ce protokó³ podpisu niezaprzeczalnego to:
+\begin{itemize}
+	\item \textit{Algorytm Chauma} — oparty na potêgowaniu modulo liczba pierwsza p,
+	\item \textit{Algorytm Boyar-Damagarda} — oparty na algorytmie podpisu cyfrowego EIGamala,
+	\item \textit{Algorytm Harna-Yanga} — dla niezaprzeczalnych podpisów grupowych.
+\end{itemize}
+
+\subsection{Niepodrabialne podpisy cyfrowe}
+Najpierw wypada siê zastanowiæ, jakie cechy musia³by posiadaæ podpis niepodrabialny. Poniewa¿ technologia podpisu opiera siê na wykorzystaniu par kluczy publiczny-prywatny, ewentualne fa³szerstwo wymaga³oby znalezienia (lub odtworzenia) odpowiedniego klucza prywatnego. Taka operacja wymaga ogromnej mocy obliczeniowej porównywalnej ze z³amaniem szyfru asymetrycznego. Niemniej jednak nie mo¿na wykluczyæ tego typu ataków. Jak im przeciwdzia³aæ? Otó¿ jest to niemo¿liwe. Fa³szerstwu nie da siê zapobiec, mo¿na je jednak wykryæ. S³u¿¹ temu protoko³y podpisów niepodrabialnych. Dla ka¿dego klucza publicznego istnieje wiele pasuj¹cych kluczy prywatnych. Aby dokonaæ fa³szerstwa, atakuj¹cy musia³by znaleŸæ ten w³aœciwy, bêd¹cy w posiadaniu osoby wykonuj¹cej podpis. Tymczasem o wiele wiêksze jest prawdopodobieñstwo uzyskania innego klucza prywatnego pasuj¹cego do badanych podpisów i klucza publicznego. Podpisy wykonane tym kluczem faktycznie bêd¹ weryfikowane jako nale¿¹ce do osoby, której podpis jest podrabiany. Niemniej jednak, jeœli zajdzie taka koniecznoœæ, ³atwo bêdzie udowodniæ, ¿e dosz³o do fa³szerstwa, poniewa¿ wykonano je przy u¿yciu innego klucza prywatnego. Podpisy s¹ w takim przypadku odmienne, chocia¿ pasuj¹ do tego samego klucza publicznego.
+
+W ten sposób zniwelowane zostaje ryzyko skutecznego ataku ze strony przeciwnika dysponuj¹cego du¿¹ moc¹ obliczeniow¹, nadal jednak istnieje mo¿liwoœæ podrobienia podpisu poprzez kradzie¿ w³aœciwego klucza prywatnego.
+
+\subsection{Podpisy œlepe}
+Œlepe podpisy cyfrowe opracowano z myœl¹ o sytuacjach, w których podpisuj¹cy nie powinien poznaæ treœci podpisywanego dokumentu. Byæ mo¿e wydaje siê to niedorzeczne, a jednak w pewnych okolicznoœciach mo¿e okazaæ siê przydatne.
+
+WyobraŸmy sobie sytuacjê, w której jeden z uczestników protoko³u wystêpuje w charakterze notariusza. Potwierdza swoim podpisem dostarczenie pewnego dokumentu przez innego u¿ytkownika. Jednoczeœnie dostarczyciel chcia³by mieæ pewnoœæ, i¿ notariusz nie pozna informacji zawartych we wspomnianym dokumencie.
+
+Najprostszym rozwi¹zaniem w takiej sytuacji jest wykorzystanie tzw. czynnika zaciemniaj¹cego. Jest to wybrana losowo zmienna, przez któr¹ u¿ytkownik A mno¿y wysy³ane do podpisu dane. U¿ytkownik B (notariusz) sk³ada podpis pod tak przekszta³conym dokumentem, nie maj¹c mo¿liwoœci uzyskania ¿adnych informacji co do jego treœci (o ile zmienna wybrana by³a w sposób naprawdê losowy), a nastêpnie odsy³a go u¿ytkownikowi A. Ten usuwa zaciemnienie i otrzymuje pierwotny dokument wraz z podpisem. Takie rozwi¹zanie ma jednak pewn¹ wadê. U¿ytkownik B nie ma ¿adnej mo¿liwoœci sprawdzenia, czy tak naprawdê nie podpisuje zobowi¹zania wp³aty sporej sumy na konto u¿ytkownika A. Aby temu zapobiec, udoskonalono ca³¹ procedurê w poni¿ej opisany sposób. U¿ytkownik A przygotowuje dokument do podpisu, po czym wykonuje n jego kopii. Wszystkie kopie, ka¿da po przemno¿eniu przez inny czynnik zaciemniaj¹cy, przesy³ane s¹ do u¿ytkownika B. Ten prosi u¿ytkownika A o dostarczenie czynników zaciemniaj¹cych dla $n$-1 dokumentów. Wszystkie te dokumenty sprawdzane s¹ pod k¹tem potencjalnego oszustwa. Jeœli oka¿¹ siê formalnie poprawne, podpis jest sk³adany pod jedynym nieodszyfrowanym plikiem. Aby móc oszukaæ tak skonstruowany protokó³, u¿ytkownik A musia³by przewidzieæ (a raczej zgadn¹æ), o które czynniki zaciemniaj¹ce poprosi go u¿ytkownik B. Prawdopodobieñstwo takiego wydarzenia wynosi l/$n$. Innymi s³owy im wiêksze $n$, tym wiêksze prawdopodobieñstwo wykrycia z³ych zamiarów ze strony wysy³aj¹cego dokument. Jeœli dodamy do tego surow¹ karê za wszelkie próby oszustwa, protokó³ powinien zapewniæ du¿e bezpieczeñstwo.
+
+\subsection{Inne warianty podpisu cyfrowego}
+Oprócz powy¿szych wymieniæ mo¿na równie¿ inne protoko³y dokonywania podpisów cyfrowych, opieraj¹ce siê na podobnych rozwi¹zaniach:
+\begin{itemize}
+	\item \textit{Podpisy poœrednie} (ang. \textbf{proxy signatures}) pozwalaj¹ na wstawianie podpisów przez u¿ytkownika B w imieniu u¿ytkownika bez znajomoœci jego klucza prywatnego,
+	\item \textit{Podpisy z wyznaczonym potwierdzaj¹cym} (ang. \textbf{designated confirmer signatures}) umo¿liwiaj¹ weryfikacjê podpisu przez osobê trzeci¹. Dziêki temu potwierdzenie poprawnoœci podpisu jest mo¿liwe nawet w sytuacji, kiedy osoba podpisuj¹ca jest niedostêpna (na przyk³ad ze wzglêdu na chorobê lub wyjazd), a tak¿e w przypadku utraty przez ni¹ klucza prywatnego
+	\item \textit{Podpisy grupowe} (ang. \textbf{group signatures}) s³u¿¹ nie tyle sprawdzeniu to¿samoœci podpisuj¹cego, ile jego przynale¿noœci do danej grupy. Innymi s³owy protokó³ obs³uguje przyznawanie uprawnieñ w obrêbie okreœlonego zbioru u¿ytkowników. Podpisy sprawdzane s¹ jedynie pod k¹tem przynale¿noœci danego u¿ytkownika do wspomnianego zbioru. Jego to¿samoœæ mo¿e byæ jednak ujawniona, jeœli zachodz¹ w¹tpliwoœci co do autentycznoœci podpisu.
+\end{itemize}

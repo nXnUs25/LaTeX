@@ -1,0 +1,36 @@
+\chapter{Nowe sposoby generowania podsumowañ lingwistycznych} \label{roz:noweSposobyPodsumowan}
+
+Rozwój technologii komputerowych, a~tak¿e sposobu i~iloœci zapisywanych danych wymusi³ nowe podejœcie do generowania podsumowañ lingwistycznych. Obecnie w~bazach danych przechowywane s¹ przeró¿ne informacje zawieraj¹ce dane w~postaci numerycznej i~tekstowej. Du¿a iloœæ tych ostatnich zapisywana jest w~postaci zdañ, wyra¿eñ, czy te¿ ró¿nej wielkoœci plików tekstowych. Dotychczasowy sposób tworzenia podsumowañ nie jest w~stanie zapewniæ uniwersalnoœci w~przypadku tak ró¿norodnych sposobów reprezentacji danych w~bazie. Kolejne podejœcia do generowania podsumowañ radz¹ sobie z~informacjami w~postaci tekstowej (szukane jest bowiem podobieñstwo do wzorca podsumowania), jak równie¿ z~danymi znajduj¹cymi siê w~plikach tekstowych~\cite{Ochelska2001}.
+
+Generowanie podsumowañ lingwistycznych nadal opiera siê na koncepcji, któr¹ zaproponowa³ Yager~\cite{YagerPodsumowania1, YagerPodsumowania2, YagerPodsumowania3, YagerPodsumowania4}, czyli bêd¹ to zdania oznajmuj¹ce sk³adaj¹ce siê z~nastêpuj¹cych okreœleñ:
+\begin{itemize}
+	\item okreœlenia licznoœci $Q$,
+	\item przedmiotu podsumowania $P$,
+	\item interesuj¹cej cechy $S$,
+	\item wskaŸnika jakoœci podsumowania $T$.
+\end{itemize}
+
+Przedstawiona tu metoda generowania podsumowania jest rozwiniêciem idei Yager'a. Pozwala ona wykonaæ podsumowanie na ró¿nych typach danych. Dobrze radzi sobie z~danymi przedstawionymi w~tradycyjnej numerycznej formie oraz z~opisami przedstawionymi w~jêzyku naturalnym (zdania znajduj¹ce siê w~bazie, czy te¿ umieszczone w~plikach tekstowych). Zatem u¿ytkownik bazy ma mo¿liwoœæ otrzymania odpowiedzi na dowolne pytanie dobrze okreœlone w sensie istniej¹cej bazy, w~rodzaju ,,{\em Ilu} pacjentów zosta³o przyjêtych {\em w~wieku œrednim}?'' lub ,,{\em Ilu} pacjentów zosta³o przyjêtych w~stanie ogólnym {\em dobrym}?''. Odpowiedzi na te pytania s¹ automatycznie generowane na podstawie podsumowañ lingwistycznych, zatem odpowiedzi¹ jest równie¿ zdanie w jêzyku naturalnym zawieraj¹ce okreœlenie licznoœci przedstawione przy u¿yciu odpowiedniego zbioru rozmytego. Przyk³adowe podsumowania mog³yby mieæ postaæ: ,,{\em Wiêkszoœæ} pacjentów zosta³a przyjêta {\em w~wieku œrednim}.'' lub ,,{\em Niewielu} pacjentów zosta³a przyjêta w~stanie ogólnym {\em dobrym}.''.
+
+Kolejne podrozdzia³y, to propozycje wykorzystania ró¿nych mechanizmów do tworzenia podsumowañ. W~pierwszym opisano generowanie podsumowañ na dokumentach tekstowych (jest to nowy element w~podsumowaniach). W~kolejnym ---~omówiono mo¿liwoœæ podsumowywania dokumentów mieszanych (zarówno danych numerycznych, jak i~wyra¿onych w~jêzyku naturalnym). W~celu zmniejszenia niepewnoœci wynikaj¹cej z~porównywania tekstów wprowadzono dodatkow¹ iloœciow¹ miarê, która ocenia niepodobieñstwo porównywanych wyra¿eñ. Nastêpnie pokazano dwa nowe sposoby wyboru rekordów do generowania podsumowañ: na podstawie selekcji ostrej i~wnioskowania rozmytego. Ostatni z~podrozdzia³ów przedstawia podsumowania z~u¿yciem zbiorów rozmytych drugiego rodzaju.
+
+Do ilustracji (Tabela~\ref{tab:BazaPacjentow}) tych zagadnieñ wybrano przejrzysty przyk³adowy zbiór rekordów, na którym bêd¹ generowane podsumowania.
+\begin{table}[ht]
+	\centering
+			\begin{tabular}{|c|c|l|}
+				\hline
+						Lp.	& Wiek pacjenta	& Stan pacjenta podczas przyjêcia do szpitala \\ \hline
+						1. & 20 & Stan pacjenta doœæ dobry. \\ \hline
+						2. & 16 & Pacjent w stanie ogólnym dobrym. \\ \hline
+						3. & 73	& Stan ogólny dobry. \\ \hline
+						4. & 59	& Stan ogólny pacjenta dobry.\\ \hline
+						5. & 19	& Pacjent w stanie ogólnym dobrym.\\ \hline
+						6. & 23	& Pacjent w stanie ogólnym dobrym.\\ \hline
+						7. & 12	& Pacjentka w stanie ogólnym dobrym.\\ \hline
+						8. & 27	& Pacjent w stanie ogólnym bardzo dobrym.\\ \hline
+						9. & 26	& Stan ogólny pacjenta bardzo ciê¿ki.\\ \hline
+						10. & 65 & Pacjentka w stanie ogólnym œrednio dobrym. \\ \hline
+		\end{tabular}
+	\caption{Przyk³adowa baza danych pacjentów}
+	\label{tab:BazaPacjentow}
+\end{table}

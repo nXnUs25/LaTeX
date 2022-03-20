@@ -1,0 +1,65 @@
+To jest rozdzia³ o XML.
+
+\section{XML Signature}
+To sekcja o XML Signature\cite{xml_signature_syntax}.
+
+\subsection{Struktura dokumentu}
+Tu jest opis struktury elementu XML Signature.
+
+\scriptsize\begin{verbatim}
+<Signature ID?> 
+    <SignedInfo>
+        <CanonicalizationMethod/>
+        <SignatureMethod/>
+        (<Reference URI? >
+            (<Transforms>)?
+            <DigestMethod>
+            <DigestValue>
+        </Reference>)+
+    </SignedInfo>
+    <SignatureValue> 
+   (<KeyInfo>)?
+   (<Object ID?>)*
+</Signature>
+\end{verbatim}
+
+\normalsize Prosty przyk³ad zastosowania.
+
+\scriptsize\begin{verbatim}
+<Signature Id="MyFirstSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"> 
+   <SignedInfo> 
+      <CanonicalizationMethod Algorithm="http://www.w3.org/2006/12/xml-c14n11"/> 
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/> 
+      <Reference URI="http://www.w3.org/TR/2000/REC-xhtml1-20000126/"> 
+         <Transforms> 
+            <Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"/> 
+         </Transforms> 
+         <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/> 
+         <DigestValue>dGhpcyBpcyBub3QgYSBzaWduYXR1cmUK.../DigestValue> 
+      </Reference> 
+   </SignedInfo> 
+   <SignatureValue>...</SignatureValue> 
+   <KeyInfo> 
+      <KeyValue>
+         <DSAKeyValue> 
+            <P>...</P><Q>...</Q><G>...</G><Y>...</Y> 
+         </DSAKeyValue> 
+      </KeyValue> 
+   </KeyInfo> 
+</Signature>
+\end{verbatim}
+\normalsize
+
+\subsubsection{Element \textit{SignedInfo}}
+
+\subsubsection{Element \textit{SignatureValue}}
+
+\subsubsection{Element \textit{KeyInfo}}
+
+\subsubsection{Element \textit{Object}}
+
+\subsection{Elementy dodatkowe}
+
+\subsubsection{Element \textit{Manifest}}
+
+\subsubsection{Element \textit{SignaturePropeties}}
